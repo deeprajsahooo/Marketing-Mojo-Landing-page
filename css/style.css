@@ -861,18 +861,27 @@ body {
 ========================= */
 .mm-banner {
   padding: 56px 0;
-  background: var(--mm-cream);
 }
 
 .mm-banner .mm-banner-box {
-  background: var(--mm-banner);
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 0px solid rgba(0, 0, 0, .06);
   border-radius: 22px;
-  padding: 24px;
+  padding: 110px 0;
+  background: url(../images/Group\ 41.png);
+  background-position: left;
+  background-size: cover;
+
 }
 
+.col-txt{
+  margin-left: 0px;
+}
+.side-img{
+  display: none;
+}
+
+
 .mm-banner .mm-qr {
-  background: #fff;
   border: 1px solid var(--mm-line);
   border-radius: 12px;
   padding: 10px;
@@ -894,7 +903,12 @@ body {
 @media (max-width: 991.98px) {
   .mm-banner .mm-banner-box {
     padding: 18px;
+    background: none;
   }
+  .side-img{
+  display: block !important;
+  width: 100%;
+}
 }
 
 /* =========================
