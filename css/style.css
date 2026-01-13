@@ -24,7 +24,7 @@ body {
 }
 
 .mm-mi {
-  font-size: 18px;
+  font-size: 20px;
   vertical-align: middle;
 }
 
@@ -66,6 +66,8 @@ body {
   background: transparent;
   border: 1px solid var(--mm-red);
   color: var(--mm-red);
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .mm-btn-outline:hover {
@@ -485,23 +487,43 @@ body {
   font-size: 20px;
   font-weight: 300;
 }
-#sec3 .mm-slider-wrap .carousel {
-  border-radius: 22px;
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 22px 50px rgba(0, 0, 0, .14);
+/* =========================
+  TWO COL – CAROUSEL
+========================= */
+
+.mm-slider-wrap{
+  width: 100%;
 }
 
-#sec3 .carousel-indicators [data-bs-target] {
-  width: 8px;
+.mm-slider-wrap .carousel-inner{
+  overflow: hidden; /* ensures image never overflows */
+}
+
+.mm-carousel-img{
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Indicators positioned below */
+.mm-slider-wrap .carousel-indicators{
+  position: static;
+  margin-top: 16px;
+}
+
+/* Clean indicator style (slider bar feel) */
+.mm-slider-wrap .carousel-indicators [data-bs-target]{
+  width: 30px;
   height: 8px;
-  border-radius: 999px;
+  border-radius: 0px;
+  background-color: #dd001d1a;
+  margin: 0 4px;
 }
 
-#sec3 .carousel-control-prev-icon,
-#sec3 .carousel-control-next-icon {
-  filter: invert(1) grayscale(1);
+.mm-slider-wrap .carousel-indicators .active{
+  background-color: #DD001D;
 }
 
 #sec3 .mm-step {
@@ -516,6 +538,17 @@ body {
   gap: 10px;
   margin-top: 10px;
 }
+
+
+.mm-premium-left {
+  position: relative;
+  background-image: url("../images/Rectangle 32.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 550px auto;
+
+}
+
 
 #sec3 .mm-step-ic {
   width: 44px;
@@ -533,10 +566,24 @@ body {
   display: block;
 }
 
+.mm-btn-outline{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;                 /* space between icon & text */
+}
+
+.mm-btn-ic{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: inline-block;
+}
+
 #sec3 .mm-footnote {
-  margin-top: 14px;
-  font-size: 12px;
-  color: #777;
+  margin-top: 80px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #282727;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
