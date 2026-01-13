@@ -864,13 +864,14 @@ body {
 }
 
 @media (max-width: 767.98px) {
-.signup-banner {
-  background-color: #FFF0D4;
-  margin-top: -8px;
-  padding: 20px;
-  border-radius: 24px;
+  .signup-banner {
+    background-color: #FFF0D4;
+    margin-top: -8px;
+    padding: 20px;
+    border-radius: 24px;
+  }
 }
-}
+
 .mm-banner .mm-banner-box {
   border: 0px solid rgba(0, 0, 0, .06);
   border-radius: 22px;
@@ -881,10 +882,11 @@ body {
 
 }
 
-.col-txt{
+.col-txt {
   margin-left: 0px;
 }
-.side-img{
+
+.side-img {
   display: none;
 }
 
@@ -913,67 +915,159 @@ body {
     padding: 18px;
     background: none;
   }
-  .side-img{
-  display: block !important;
-  width: 100%;
-}
+
+  .side-img {
+    display: block !important;
+    width: 100%;
+  }
 }
 
 /* =========================
-   8) TUTORIAL CAROUSEL (mm-tutorial)
+section 8
 ========================= */
-.mm-tutorial {
-  padding: 40px 10px;
-  background: #fff;
+/* SECTION */
+.mm-cards-section {
+  position: relative;
+  background: #fff4db;
+  padding: 60px 0;
+  overflow: hidden;
+  background-image: url("../images/Rectangle 41.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 600px auto;
+  padding-top: 80px;
 }
 
-.mm-tutorial .mm-tut-card {
-  text-decoration: none;
-  color: var(--mm-text);
+@media (max-width: 767.98px) {
+  .mm-cards-section {
+    background-size: 400px auto;
+    background-position: right top;
+     overflow-x: hidden;
+  }
+}
+
+/* KEEP CONTENT ABOVE BG */
+.mm-cards-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* HEADING */
+.mm-section-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+/* SLIDER */
+.mm-slider {
+  overflow: hidden;
+  padding-right: 8px;
+}
+
+/* REMOVE GAP */
+.mm-slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+/* ADD PADDING INSIDE SLIDE */
+.mm-slide {
+  flex: 0 0 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+
+.mm-slide {
+  flex: 0 0 calc(33.333% - 16px);
+}
+
+
+/* CARD */
+.mm-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+/* IMAGE */
+.mm-card-img {
+  position: relative;
+}
+
+.mm-card-img img {
+  width: 100%;
   display: block;
 }
 
-.mm-tutorial .mm-tut-thumb {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  height: 180px;
-  border: 1px solid rgba(0, 0, 0, .08);
-}
-
-.mm-tutorial .mm-tut-overlay {
+/* PLAY ICON */
+.mm-play {
   position: absolute;
-  left: 14px;
+  right: 14px;
   bottom: 14px;
+  width: 34px;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mm-play .material-icons {
   color: #fff;
-  font-weight: 600;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  text-shadow: 0 10px 16px rgba(0, 0, 0, .35);
+  font-size: 20px;
 }
 
-.mm-tutorial .mm-play {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  font-size: 44px;
+/* BODY */
+.mm-card-body {
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ARROWS */
+.mm-slider-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.mm-arrow {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mm-arrow-left {
+  background: #f5b7b7;
+}
+
+.mm-arrow-right {
+  background: #e11d2e;
+}
+
+.mm-arrow .material-icons {
   color: #fff;
-  text-shadow: 0 12px 18px rgba(0, 0, 0, .35);
 }
 
-.mm-tutorial .mm-tut-title {
-  margin-top: 10px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, .06);
-  border-radius: 14px;
-  padding: 12px 14px;
-}
+/* MOBILE */
+@media (max-width: 767px) {
+  .mm-slide {
+    flex: 0 0 100%;
+  }
 
-@media (max-width: 575.98px) {
-  .mm-tutorial .mm-tut-thumb {
-    height: 160px;
+  .mm-section-bg {
+    width: 220px;
   }
 }
 
@@ -982,7 +1076,6 @@ body {
 ========================= */
 .mm-faq {
   padding: 56px 10px 72px;
-  background: var(--mm-cream);
 }
 
 .mm-faq .mm-faq-wrap {
