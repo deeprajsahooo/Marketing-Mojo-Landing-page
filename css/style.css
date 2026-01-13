@@ -464,8 +464,20 @@ body {
    3) PORTFOLIO OPTIMIZER (mm-two-col #sec3)
 ========================= */
 #sec3.mm-two-col {
-  padding: 64px 0;
+  padding: 40px 10px;
   background: var(--mm-cream);
+   position: relative;
+  background-image: url("../images/Rectangle 32.png");
+  background-repeat: no-repeat;
+  background-position: left top;     
+  background-size: 650px auto;  
+   padding-top: 80px;                   
+}
+@media (max-width: 767.98px){
+ #sec3.mm-two-col{
+    background-size: 430px auto;
+    background-position: left top;
+  }
 }
 
 #sec3 .mm-kicker {
@@ -538,17 +550,6 @@ body {
   gap: 10px;
   margin-top: 10px;
 }
-
-
-.mm-premium-left {
-  position: relative;
-  background-image: url("../images/Rectangle 32.png");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 550px auto;
-
-}
-
 
 #sec3 .mm-step-ic {
   width: 44px;
