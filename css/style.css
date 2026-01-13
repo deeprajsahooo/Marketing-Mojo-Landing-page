@@ -57,8 +57,8 @@ body {
 }
 
 .mm-btn-primary:hover {
-  background: var(--mm-red2);
-  border-color: var(--mm-red2);
+  background: var(--mm-red);
+  border-color: var(--mm-red);
   color: #fff;
 }
 
@@ -80,7 +80,9 @@ body {
 ========================= */
 .mm-hero {
   background: var(--mm-cream);
-  padding: 44px 0 0 0;
+  padding: 50px 0 0 0;
+  border-radius: 24px;
+  margin: 10px;
 }
 
 .mm-hero .mm-h1 {
@@ -101,7 +103,7 @@ body {
   align-items: center;
   gap: 8px;
   color: #3F3F3F;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 300;
   margin: 10px 0 16px;
 }
