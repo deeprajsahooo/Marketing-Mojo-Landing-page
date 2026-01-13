@@ -467,11 +467,11 @@ body {
 }
 
 #sec3 .mm-kicker {
-  letter-spacing: .18em;
-  font-weight: 600;
-  font-size: 12px;
+   font-weight: 500;
+  font-size: 16px;
   color: var(--mm-red);
   margin-bottom: 8px;
+  letter-spacing: 2.4px;
 }
 
 #sec3 .mm-h2 {
@@ -479,6 +479,12 @@ body {
   margin: 0 0 10px;
 }
 
+#sec3 .mm-sub {
+  color: #3F3F3F;
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 300;
+}
 #sec3 .mm-slider-wrap .carousel {
   border-radius: 22px;
   overflow: hidden;
@@ -500,18 +506,31 @@ body {
 
 #sec3 .mm-step {
   background: #fff;
-  border: 1px solid rgba(215, 25, 32, .24);
+  border: 1px solid #FFBE43;
   border-radius: 999px;
   padding: 12px 14px;
   display: flex;
+  font-size: 20px;
+  color: #3F3F3F;
   align-items: center;
   gap: 10px;
   margin-top: 10px;
 }
 
 #sec3 .mm-step-ic {
-  color: var(--mm-red);
-  font-size: 20px;
+  width: 44px;
+  /* container size */
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sec3 .mm-step-ic img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
 }
 
 #sec3 .mm-footnote {
@@ -533,11 +552,11 @@ body {
 }
 
 #sec4 .mm-kicker {
-  letter-spacing: .18em;
-  font-weight: 600;
-  font-size: 12px;
+   font-weight: 500;
+  font-size: 16px;
   color: var(--mm-red);
   margin-bottom: 8px;
+  letter-spacing: 2.4px;
 }
 
 #sec4 .mm-h2 {
@@ -599,11 +618,11 @@ body {
 }
 
 #sec5 .mm-kicker {
-  letter-spacing: .18em;
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 16px;
   color: var(--mm-red);
   margin-bottom: 8px;
+  letter-spacing: 2.4px;
 }
 
 #sec5 .mm-h2 {
