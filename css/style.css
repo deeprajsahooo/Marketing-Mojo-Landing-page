@@ -363,6 +363,8 @@ body {
 
 .mm-premium .mm-pill-txt {
   flex: 1;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .mm-premium .mm-pill-go {
