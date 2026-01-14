@@ -900,6 +900,7 @@ body {
 ========================= */
 .mm-banner {
   padding: 56px 0 0 0;
+  margin-bottom: -8px;
 }
 
 @media (max-width: 767.98px) {
