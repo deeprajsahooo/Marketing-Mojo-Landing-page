@@ -514,7 +514,7 @@ body {
 }
 
 #sec3 .mm-carousel-img {
-  max-width: 400px;
+  max-width: 440px;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -650,7 +650,7 @@ body {
 }
 
 #sec4 .mm-carousel-img {
-  max-width: 400px;
+  max-width: 440px;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -962,12 +962,12 @@ body {
 }
 
 /* =========================
-section 8
+   TUTORIALS SECTION
 ========================= */
-/* SECTION */
-.mm-cards-section {
+
+.tutorials-section {
   position: relative;
-  background: #fff4db;
+  background: #FFF0D4;
   padding: 60px 0;
   overflow: hidden;
   background-image: url("../images/Rectangle 41.png");
@@ -978,137 +978,132 @@ section 8
 }
 
 @media (max-width: 767.98px) {
-  .mm-cards-section {
+  .tutorials-section {
     background-size: 400px auto;
     background-position: right top;
     overflow-x: hidden;
   }
 }
 
-/* KEEP CONTENT ABOVE BG */
-.mm-cards-section .container {
+.section-title {
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   CARD STYLES
+========================= */
+.tutorial-card {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border: 0px solid rgba(0, 0, 0, .06);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+
+/* CRITICAL: Force content to sit ON TOP of the background image */
+.tutorials-section .container {
   position: relative;
   z-index: 2;
 }
 
-/* HEADING */
-.mm-section-title {
-  text-align: center;
-  font-size: 40px;
-  font-weight: 500;
-  margin-bottom: 40px;
+.tutorial-card:hover {
+  transform: translateY(-5px);
 }
 
-/* SLIDER */
-.mm-slider {
-  overflow: hidden;
-  padding-right: 8px;
-}
-
-/* REMOVE GAP */
-.mm-slider-track {
-  display: flex;
-  transition: transform 0.4s ease;
-}
-
-/* ADD PADDING INSIDE SLIDE */
-.mm-slide {
-  flex: 0 0 100%;
-  padding: 0 12px;
-  box-sizing: border-box;
-}
-
-
-.mm-slide {
-  flex: 0 0 calc(33.333% - 16px);
-}
-
-
-/* CARD */
-.mm-card {
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  height: 100%;
-}
-
-/* IMAGE */
-.mm-card-img {
+.card-img-wrapper {
   position: relative;
+  height: 200px;
 }
 
-.mm-card-img img {
+.card-img-wrapper img {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* PLAY ICON */
-.mm-play {
+/* Play Button Circle */
+.play-icon {
   position: absolute;
-  right: 14px;
-  bottom: 14px;
-  width: 34px;
-  height: 34px;
-  background: rgba(0, 0, 0, 0.7);
+  bottom: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: #3F3F3F;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
-.mm-play .material-icons {
+.tutorial-card:hover .play-icon {
+  background-color: #DD001D;
+  /* Red on hover */
+}
+
+.play-icon .material-icons {
   color: #fff;
+  font-size: 24px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
   font-size: 20px;
-}
-
-/* BODY */
-.mm-card-body {
-  padding: 14px 16px;
-  font-size: 15px;
   font-weight: 500;
+  margin: 0;
+  color: #3F3F3F;
 }
 
-/* ARROWS */
-.mm-slider-arrows {
+/* =========================
+   ARROW CONTROLS
+========================= */
+.controls-wrapper {
   display: flex;
   justify-content: center;
-  gap: 14px;
-  margin-top: 32px;
+  gap: 15px;
 }
 
-.mm-arrow {
-  width: 42px;
-  height: 42px;
+.custom-arrow {
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
-.mm-arrow-left {
-  background: #f5b7b7;
+.custom-arrow:hover {
+  opacity: 0.8;
 }
 
-.mm-arrow-right {
-  background: #e11d2e;
+/* Pink Arrow (Left) */
+.custom-arrow.prev {
+  background-color: #DD001D;
 }
 
-.mm-arrow .material-icons {
+/* Red Arrow (Right) */
+.custom-arrow.next {
+  background-color: #e11d2d23;
+}
+
+.custom-arrow .material-icons {
   color: #fff;
+  font-size: 24px;
 }
 
-/* MOBILE */
-@media (max-width: 767px) {
-  .mm-slide {
-    flex: 0 0 100%;
-  }
-
-  .mm-section-bg {
-    width: 220px;
-  }
-}
 /* =========================
    9) FAQ SECTION (mm-faq)
 ========================= */
@@ -1116,6 +1111,24 @@ section 8
 /* Section */
 .mm-faq {
   padding: 56px 0 72px;
+  padding: 40px 10px;
+  background: #fff;
+  position: relative;
+  background-image: url("../images/Rectangle 37.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 600px auto;
+
+
+}
+
+@media (max-width: 767.98px) {
+  .mm-faq {
+    background-size: 330px auto;
+    overflow-x: hidden;
+  }
+}
+
 }
 
 .mm-faq h3 {
@@ -1135,7 +1148,8 @@ section 8
   border-radius: 14px !important;
   overflow: hidden;
   margin-bottom: 14px;
-  background: #fffdf6; /* LIGHT by default */
+  background: #fffdf6;
+  /* LIGHT by default */
 }
 
 /* Button base */
@@ -1143,19 +1157,22 @@ section 8
   position: relative;
   font-weight: 500;
   color: #000;
-  background: #fffdf6; /* LIGHT */
+  background: #fffdf6;
+  /* LIGHT */
   padding: 18px 22px;
 }
 
 /* Active (OPEN) state */
 .mm-faq .accordion-button:not(.collapsed) {
-  background: #FFF1D6; /* DARK */
+  background: #FFF1D6;
+  /* DARK */
   box-shadow: none;
 }
 
 /* Body */
 .mm-faq .accordion-body {
-  background: #FFF1D6; /* SAME as active header */
+  background: #FFF1D6;
+  /* SAME as active header */
   font-size: 15px;
   line-height: 1.6;
   color: #333;

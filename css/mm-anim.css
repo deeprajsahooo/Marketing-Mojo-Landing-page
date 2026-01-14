@@ -206,3 +206,111 @@
 .mm-link:hover{
   opacity: .88;
 }
+
+/* =====================================================
+  TUTORIALS — MICRO INTERACTIONS
+  (Matches MM landing animation language)
+===================================================== */
+
+
+/* =========================
+  SECTION TITLE
+========================= */
+.section-title{
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.section-title:hover{
+  transform: translateX(2px);
+}
+
+
+/* =========================
+  CARD BASE
+========================= */
+.tutorial-card{
+  transition: transform .22s ease, box-shadow .22s ease;
+  will-change: transform;
+}
+
+.tutorial-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.10);
+}
+
+
+/* =========================
+  IMAGE — gentle scale
+========================= */
+.card-img-wrapper img{
+  transition: transform .35s ease;
+  will-change: transform;
+}
+
+@media (hover:hover){
+  .tutorial-card:hover .card-img-wrapper img{
+    transform: scale(1.04);
+  }
+}
+
+
+/* =========================
+  PLAY ICON — micro response
+========================= */
+.play-icon{
+  transition: background-color .22s ease, transform .22s ease;
+  will-change: transform;
+}
+
+.tutorial-card:hover .play-icon{
+  transform: scale(1.06);
+  background-color: var(--mm-red);
+}
+
+
+/* =========================
+  CARD TITLE
+========================= */
+.card-content h3{
+  transition: color .2s ease;
+}
+
+.tutorial-card:hover .card-content h3{
+  color: #000;
+}
+
+
+/* =========================
+  ARROW CONTROLS
+========================= */
+.custom-arrow{
+  transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
+  will-change: transform;
+}
+
+.custom-arrow:hover{
+  transform: translateY(-1px);
+  opacity: .9;
+  box-shadow: 0 10px 20px rgba(0,0,0,.12);
+}
+
+.custom-arrow:active{
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(0,0,0,.10);
+}
+
+
+/* =========================
+  ACCESSIBILITY & SAFETY
+========================= */
+@media (prefers-reduced-motion: reduce){
+  .tutorials-section,
+  .tutorial-card,
+  .card-img-wrapper img,
+  .play-icon,
+  .custom-arrow,
+  .section-title{
+    transition: none !important;
+    transform: none !important;
+  }
+}
