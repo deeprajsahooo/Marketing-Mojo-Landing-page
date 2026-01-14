@@ -1,39 +1,72 @@
 /* =====================================================
-  MICRO INTERACTIONS (MM Landing) — minimal & clean
+  MICRO INTERACTIONS (MM Landing) — minimal & professional
+  Load AFTER your main CSS
 ===================================================== */
 
+:root {
+    --mm-ease: cubic-bezier(.2, .8, .2, 1);
+    --mm-shadow-sm: 0 8px 18px rgba(0, 0, 0, .08);
+    --mm-shadow-md: 0 14px 26px rgba(0, 0, 0, .10);
+    --mm-focus: 0 0 0 3px rgba(221, 0, 29, .14);
+}
+
+/* =========================
+  GLOBAL SMOOTHNESS
+========================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
 
 /* =========================
   BUTTONS (mm-btn)
 ========================= */
 .mm-btn {
-    transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease;
+    transition: transform .22s var(--mm-ease),
+        box-shadow .22s var(--mm-ease),
+        background-color .22s var(--mm-ease),
+        border-color .22s var(--mm-ease),
+        color .22s var(--mm-ease);
     will-change: transform;
 }
 
-.mm-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, .10);
+@media (hover:hover) {
+    .mm-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: var(--mm-shadow-sm);
+    }
 }
 
 .mm-btn:active {
     transform: translateY(0);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .07);
 }
 
 .mm-btn:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(221, 0, 29, .18);
+    box-shadow: var(--mm-focus);
 }
 
-
 /* =========================
-  HERO BG (mm-hero-bg)
-  — horizontal drift only
+  HERO BG (mm-hero-bg) — ultra subtle drift
+  (Professional: almost unnoticeable)
 ========================= */
 .mm-hero-bg {
-    animation: heroBgDrift 16s ease-in-out infinite;
     will-change: background-position;
+    animation: heroBgDrift 22s ease-in-out infinite;
 }
 
 @keyframes heroBgDrift {
@@ -42,7 +75,7 @@
     }
 
     50% {
-        background-position: 54% 50%;
+        background-position: 52% 50%;
     }
 
     100% {
@@ -50,119 +83,199 @@
     }
 }
 
-/* Mobile: disable drift */
 @media (max-width: 991.98px) {
     .mm-hero-bg {
         animation: none;
     }
 }
 
-
 /* =========================
-  QR (mm-qr img)
+  QR (mm-qr img) — subtle breathe
 ========================= */
-.mm-qr img {
-    transition: transform .18s ease, filter .18s ease;
-    will-change: transform;
+
+.mm-qr img{
+  animation: mmQrBreathe 3.2s ease-in-out infinite;
+  transition: transform .22s var(--mm-ease), filter .22s var(--mm-ease);
+  will-change: transform;
+  transform-origin: center;
 }
 
-.mm-qr:hover img {
-    transform: translateY(-1px);
-    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .10));
+/* Hover stays clean (no jump) */
+@media (hover:hover){
+  .mm-qr:hover img{
+    transform: scale(1.03);
+    filter: drop-shadow(0 10px 16px rgba(0,0,0,.10));
+  }
+}
+
+/* Gentle scale in-out */
+@keyframes mmQrBreathe{
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); } /* VERY slight */
+  100% { transform: scale(1); }
+}
+
+/* =========================
+  HERO FORM (mm-form) — subtle hover
+========================= */
+
+.mm-form{
+  transition: 
+    transform .28s cubic-bezier(.4,0,.2,1),
+    box-shadow .28s cubic-bezier(.4,0,.2,1),
+    border-color .28s cubic-bezier(.4,0,.2,1);
+  will-change: transform;
+}
+
+@media (hover:hover){
+  .mm-form:hover{
+    transform: translateY(-3px);
+    box-shadow: 
+      0 24px 44px rgba(0,0,0,.12),
+      0 8px 18px rgba(0,0,0,.06);
+  }
+}
+
+/* =========================
+  mm-tilt — subtle vertical float
+  (Section 2 & Section 5)
+  Works for img OR wrapper
+========================= */
+
+/* CASE 1: mm-tilt IS the image */
+.mm-premium img.mm-tilt,
+#sec5 img.mm-tilt{
+  will-change: transform;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+  animation: mmFloatY 3.5s ease-in-out infinite;
+}
+
+/* CASE 2: mm-tilt WRAPS an image */
+.mm-premium .mm-tilt > img,
+#sec5 .mm-tilt > img{
+  will-change: transform;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+  animation: mmFloatY 3.5s ease-in-out infinite;
+}
+
+/* Floating motion */
+@keyframes mmFloatY{
+  0%, 100%{
+    transform: translate3d(0,0,0);
+  }
+  50%{
+    transform: translate3d(0,-8px,0);
+  }
 }
 
 
 /* =========================
-  KICKER (mm-kicker)
+  KICKER (mm-kicker) — calm
 ========================= */
 .mm-kicker {
-    transition: transform .25s ease, opacity .25s ease;
+    transition: opacity .22s var(--mm-ease), transform .22s var(--mm-ease);
 }
 
-.mm-kicker:hover {
-    transform: translateX(2px);
+@media (hover:hover) {
+    .mm-kicker:hover {
+        opacity: .96;
+        transform: translateX(1px);
+    }
 }
-
 
 /* =========================
-  NOTE (mm-note)
+  NOTE (mm-note) — subtle emphasis
 ========================= */
 .mm-note {
-    transition: transform .18s ease, box-shadow .18s ease;
-    will-change: transform;
+    transition: box-shadow .22s var(--mm-ease), border-color .22s var(--mm-ease);
 }
 
-.mm-note:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 12px 26px rgba(0, 0, 0, .08);
+@media (hover:hover) {
+    .mm-note:hover {
+        box-shadow: var(--mm-shadow-sm);
+    }
 }
-
 
 /* =========================
-  FOOTNOTE (mm-footnote)
+  FOOTNOTE (mm-footnote) — slight fade
 ========================= */
 .mm-footnote {
-    transition: opacity .18s ease;
+    transition: opacity .22s var(--mm-ease);
 }
 
-.mm-footnote:hover {
-    opacity: .92;
+@media (hover:hover) {
+    .mm-footnote:hover {
+        opacity: .95;
+    }
 }
-
 
 /* =========================
-  STEPS (mm-step)
+  STEPS (mm-step) — minimal lift
 ========================= */
 #sec3 .mm-step,
 #sec4 .mm-step,
 #sec5 .mm-step {
-    transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    transition: transform .22s var(--mm-ease),
+        box-shadow .22s var(--mm-ease),
+        border-color .22s var(--mm-ease);
     will-change: transform;
 }
 
-#sec3 .mm-step:hover,
-#sec4 .mm-step:hover,
-#sec5 .mm-step:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, .07);
-    border-color: rgba(255, 190, 67, .95);
-}
+@media (hover:hover) {
 
+    #sec3 .mm-step:hover,
+    #sec4 .mm-step:hover,
+    #sec5 .mm-step:hover {
+        transform: translateY(-1px);
+        box-shadow: var(--mm-shadow-sm);
+        border-color: rgba(255, 190, 67, .85);
+    }
+}
 
 /* =========================
-  PREMIUM PILL HOVER
+  PREMIUM PILL HOVER — professional
 ========================= */
 .mm-premium .mm-pill {
-    transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+    transition: transform .22s var(--mm-ease),
+        box-shadow .22s var(--mm-ease),
+        background-color .22s var(--mm-ease);
     will-change: transform;
 }
 
-.mm-premium .mm-pill:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, .08);
-    background: #fff6e1;
+@media (hover:hover) {
+    .mm-premium .mm-pill:hover {
+        transform: translateY(-1px);
+        box-shadow: var(--mm-shadow-sm);
+        background-color: #fff6e6;
+    }
 }
 
 .mm-premium .mm-pill-ic {
-    transition: transform .18s ease;
+    transition: transform .22s var(--mm-ease);
 }
 
-.mm-premium .mm-pill:hover .mm-pill-ic {
-    transform: scale(1.04);
+@media (hover:hover) {
+    .mm-premium .mm-pill:hover .mm-pill-ic {
+        transform: scale(1.03);
+    }
 }
-
 
 /* =========================
-  IMAGES (mm-tilt)
+  IMAGES (mm-tilt) — calm hover only
+  (No heavy shadows)
 ========================= */
 .mm-tilt {
-    transition: transform .25s ease, filter .25s ease;
+    transition: transform .28s var(--mm-ease), filter .28s var(--mm-ease);
     will-change: transform;
 }
 
-.mm-tilt:hover {
-    transform: translateY(-2px);
-    filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .14));
+@media (hover:hover) {
+    .mm-tilt:hover {
+        transform: translateY(-1px);
+        filter: drop-shadow(0 14px 22px rgba(0, 0, 0, .12));
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -171,18 +284,17 @@
     }
 }
 
-
 /* =========================
-  CAROUSEL
+  CAROUSEL — keep it smooth but not slow
 ========================= */
 #c3 .carousel-item,
 #c4 .carousel-item {
-    transition: transform .55s ease-in-out;
+    transition: transform .55s var(--mm-ease);
 }
 
 #sec3 .mm-carousel-img,
 #sec4 .mm-carousel-img {
-    transition: transform .25s ease, filter .25s ease;
+    transition: transform .28s var(--mm-ease), filter .28s var(--mm-ease);
 }
 
 @media (hover:hover) {
@@ -190,170 +302,153 @@
     #sec3 .mm-carousel-img:hover,
     #sec4 .mm-carousel-img:hover {
         transform: scale(1.01);
-        filter: drop-shadow(0 14px 22px rgba(0, 0, 0, .12));
+        filter: drop-shadow(0 14px 20px rgba(0, 0, 0, .10));
     }
 }
 
 #sec3 .carousel-indicators [data-bs-target],
 #sec4 .carousel-indicators [data-bs-target] {
-    transition: opacity .18s ease, background-color .18s ease;
+    transition: opacity .22s var(--mm-ease), background-color .22s var(--mm-ease);
 }
 
-#sec3 .carousel-indicators [data-bs-target]:hover,
-#sec4 .carousel-indicators [data-bs-target]:hover {
-    opacity: .85;
-}
+@media (hover:hover) {
 
+    #sec3 .carousel-indicators [data-bs-target]:hover,
+    #sec4 .carousel-indicators [data-bs-target]:hover {
+        opacity: .9;
+    }
+}
 
 /* =========================
-  LINKS
+  LINKS (mm-link)
 ========================= */
 .mm-link {
-    transition: opacity .18s ease;
+    transition: opacity .22s var(--mm-ease);
 }
 
-.mm-link:hover {
-    opacity: .88;
+@media (hover:hover) {
+    .mm-link:hover {
+        opacity: .9;
+    }
 }
 
 /* =====================================================
-  TUTORIALS — MICRO INTERACTIONS
-  (Matches MM landing animation language)
+  TUTORIALS — minimal interactions
 ===================================================== */
 
-
-/* =========================
-  SECTION TITLE
-========================= */
 .section-title {
-    transition: transform .25s ease, opacity .25s ease;
+    transition: opacity .22s var(--mm-ease), transform .22s var(--mm-ease);
 }
 
-.section-title:hover {
-    transform: translateX(2px);
+@media (hover:hover) {
+    .section-title:hover {
+        opacity: .96;
+        transform: translateX(1px);
+    }
 }
 
-
-/* =========================
-  CARD BASE
-========================= */
 .tutorial-card {
-    transition: transform .22s ease, box-shadow .22s ease;
+    transition: transform .22s var(--mm-ease), box-shadow .22s var(--mm-ease);
     will-change: transform;
 }
 
-.tutorial-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 34px rgba(0, 0, 0, .10);
+@media (hover:hover) {
+    .tutorial-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--mm-shadow-md);
+    }
 }
 
-
-/* =========================
-  IMAGE — gentle scale
-========================= */
 .card-img-wrapper img {
-    transition: transform .35s ease;
+    transition: transform .40s var(--mm-ease);
     will-change: transform;
 }
 
 @media (hover:hover) {
     .tutorial-card:hover .card-img-wrapper img {
-        transform: scale(1.04);
+        transform: scale(1.03);
     }
 }
 
-
-/* =========================
-  PLAY ICON — micro response
-========================= */
 .play-icon {
-    transition: background-color .22s ease, transform .22s ease;
-    will-change: transform;
+    transition: background-color .22s var(--mm-ease), transform .22s var(--mm-ease);
 }
 
-.tutorial-card:hover .play-icon {
-    transform: scale(1.06);
-    background-color: var(--mm-red);
+@media (hover:hover) {
+    .tutorial-card:hover .play-icon {
+        transform: scale(1.05);
+        background-color: var(--mm-red);
+    }
 }
 
-
-/* =========================
-  CARD TITLE
-========================= */
 .card-content h3 {
-    transition: color .2s ease;
+    transition: color .22s var(--mm-ease);
 }
 
-.tutorial-card:hover .card-content h3 {
-    color: #000;
+@media (hover:hover) {
+    .tutorial-card:hover .card-content h3 {
+        color: #000;
+    }
 }
 
-
-/* =========================
-  ARROW CONTROLS
-========================= */
+/* Arrow controls */
 .custom-arrow {
-    transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
+    transition: transform .22s var(--mm-ease),
+        opacity .22s var(--mm-ease),
+        box-shadow .22s var(--mm-ease);
     will-change: transform;
 }
 
-.custom-arrow:hover {
-    transform: translateY(-1px);
-    opacity: .9;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .12);
+@media (hover:hover) {
+    .custom-arrow:hover {
+        transform: translateY(-1px);
+        opacity: .92;
+        box-shadow: var(--mm-shadow-sm);
+    }
 }
 
 .custom-arrow:active {
     transform: translateY(0);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, .10);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .08);
 }
 
 /* =====================================================
-   FAQ MICRO INTERACTIONS & TRANSITIONS
+  FAQ — smooth + professional
 ===================================================== */
 
-/* Accordion item hover (subtle, no lift) */
 .mm-faq .accordion-item {
-    transition: box-shadow .25s ease, border-color .25s ease;
+    transition: box-shadow .22s var(--mm-ease), border-color .22s var(--mm-ease);
 }
 
-.mm-faq .accordion-item:hover {
-    border-color: rgba(255, 190, 67, .6);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, .06);
+@media (hover:hover) {
+    .mm-faq .accordion-item:hover {
+        border-color: rgba(255, 190, 67, .55);
+        box-shadow: var(--mm-shadow-sm);
+    }
 }
 
-
-/* Button base transition */
 .mm-faq .accordion-button {
-    transition: background-color .25s ease, color .25s ease;
+    transition: background-color .22s var(--mm-ease), color .22s var(--mm-ease);
 }
 
-
-/* Plus / Cross icon animation */
 .mm-faq .accordion-button::before {
-    transition: transform .25s ease, opacity .25s ease;
+    transition: transform .22s var(--mm-ease);
     transform-origin: center;
 }
 
-/* Rotate when open */
 .mm-faq .accordion-button:not(.collapsed)::before {
     transform: rotate(90deg);
 }
 
-
-/* Body slide-fade feel (Bootstrap-safe) */
-.mm-faq .accordion-collapse {
-    transition: height .35s ease;
-}
-
+/* Use fade only (Bootstrap handles height) */
 .mm-faq .accordion-body {
-    animation: faqFade .25s ease;
+    animation: faqFade .20s var(--mm-ease);
 }
 
 @keyframes faqFade {
     from {
         opacity: 0;
-        transform: translateY(-4px);
+        transform: translateY(-2px);
     }
 
     to {
@@ -362,9 +457,7 @@
     }
 }
 
-
-/* Keyboard focus clarity */
 .mm-faq .accordion-button:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(221, 0, 29, .18);
+    box-shadow: var(--mm-focus);
 }
