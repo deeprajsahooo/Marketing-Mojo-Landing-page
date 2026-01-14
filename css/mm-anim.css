@@ -299,18 +299,62 @@
   box-shadow: 0 6px 14px rgba(0,0,0,.10);
 }
 
+/* =====================================================
+   FAQ MICRO INTERACTIONS & TRANSITIONS
+===================================================== */
 
-/* =========================
-  ACCESSIBILITY & SAFETY
-========================= */
-@media (prefers-reduced-motion: reduce){
-  .tutorials-section,
-  .tutorial-card,
-  .card-img-wrapper img,
-  .play-icon,
-  .custom-arrow,
-  .section-title{
-    transition: none !important;
-    transform: none !important;
+/* Accordion item hover (subtle, no lift) */
+.mm-faq .accordion-item{
+  transition: box-shadow .25s ease, border-color .25s ease;
+}
+
+.mm-faq .accordion-item:hover{
+  border-color: rgba(255,190,67,.6);
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+}
+
+
+/* Button base transition */
+.mm-faq .accordion-button{
+  transition: background-color .25s ease, color .25s ease;
+}
+
+
+/* Plus / Cross icon animation */
+.mm-faq .accordion-button::before{
+  transition: transform .25s ease, opacity .25s ease;
+  transform-origin: center;
+}
+
+/* Rotate when open */
+.mm-faq .accordion-button:not(.collapsed)::before{
+  transform: rotate(90deg);
+}
+
+
+/* Body slide-fade feel (Bootstrap-safe) */
+.mm-faq .accordion-collapse{
+  transition: height .35s ease;
+}
+
+.mm-faq .accordion-body{
+  animation: faqFade .25s ease;
+}
+
+@keyframes faqFade{
+  from{
+    opacity: 0;
+    transform: translateY(-4px);
   }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Keyboard focus clarity */
+.mm-faq .accordion-button:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(221,0,29,.18);
 }
