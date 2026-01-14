@@ -1134,6 +1134,8 @@ body {
 .mm-faq h3 {
   color: #000;
   font-weight: 500;
+  font-size: 24px;
+  font-weight: 300;
 }
 
 /* Wrapper */
@@ -1144,11 +1146,10 @@ body {
 
 /* Accordion item */
 .mm-faq .accordion-item {
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 14px !important;
+  border-radius: 8px !important;
   overflow: hidden;
   margin-bottom: 14px;
-  background: #fffdf6;
+  background: #FFF0D4;
   /* LIGHT by default */
 }
 
@@ -1156,9 +1157,9 @@ body {
 .mm-faq .accordion-button {
   position: relative;
   font-weight: 500;
+  font-size: 24px;
   color: #000;
-  background: #fffdf6;
-  /* LIGHT */
+  background: #FFFBEF;
   padding: 18px 22px;
 }
 
@@ -1173,9 +1174,9 @@ body {
 .mm-faq .accordion-body {
   background: #FFF1D6;
   /* SAME as active header */
-  font-size: 15px;
-  line-height: 1.6;
-  color: #333;
+  font-size: 24px;
+    font-weight: 300;
+  color: #3F3F3F;
 }
 
 /* Remove Bootstrap arrow */
@@ -1188,9 +1189,9 @@ body {
   content: "+";
   position: absolute;
   right: 22px;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
-  color: #ff2d2d;
+  color: #DD001D;
 }
 
 /* × icon when open */
@@ -1205,5 +1206,5 @@ body {
 
 /* Red utility */
 .mm-red {
-  color: #ff2d2d;
+  color: #DD001D;
 }
