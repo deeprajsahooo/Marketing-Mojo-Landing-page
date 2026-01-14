@@ -513,7 +513,7 @@ body {
   /* ensures image never overflows */
 }
 
- #sec3 .mm-carousel-img {
+#sec3 .mm-carousel-img {
   max-width: 400px;
   width: 100%;
   height: auto;
@@ -761,7 +761,7 @@ body {
    5) SWITCHER REPORT (mm-two-col #sec5)
 ========================= */
 
- #sec5.mm-two-col {
+#sec5.mm-two-col {
   padding: 40px 10px;
   background: var(--mm-cream);
   position: relative;
@@ -779,7 +779,7 @@ body {
   }
 }
 
-#sec5 .col-lg-7{
+#sec5 .col-lg-7 {
   display: flex;
   justify-content: center;
 }
@@ -798,7 +798,7 @@ body {
 }
 
 #sec5 .mm-sub {
- color: #3F3F3F;
+  color: #3F3F3F;
   margin: 0 0 14px;
   font-size: 20px;
   font-weight: 300;
@@ -842,7 +842,7 @@ body {
 
 #sec5 .mm-tilt {
   max-width: 400px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 @media (max-width: 767.98px) {
@@ -851,7 +851,7 @@ body {
     margin: 0 auto;
     display: block;
   }
-  }
+}
 
 #sec5 .mm-footnote {
   margin-top: 80px;
@@ -981,7 +981,7 @@ section 8
   .mm-cards-section {
     background-size: 400px auto;
     background-position: right top;
-     overflow-x: hidden;
+    overflow-x: hidden;
   }
 }
 
@@ -1110,29 +1110,84 @@ section 8
   }
 }
 
-/* =========================
-   9) FAQ (mm-faq)
+* =========================
+   9) FAQ (FINAL)
 ========================= */
+
+/* Section */
 .mm-faq {
-  padding: 56px 10px 72px;
+  padding: 56px 0 72px;
 }
 
+.mm-faq h3 {
+  color: #000;
+  font-weight: 500;
+}
+
+/* Wrapper */
 .mm-faq .mm-faq-wrap {
   max-width: 920px;
+  padding: 0 12px;
 }
 
+/* Accordion item */
 .mm-faq .accordion-item {
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 14px !important;
   overflow: hidden;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  background: #fffdf6; /* LIGHT by default */
 }
 
+/* Button base */
 .mm-faq .accordion-button {
-  font-weight: 600;
-  background: #FFF7EA;
+  position: relative;
+  font-weight: 500;
+  color: #000;
+  background: #fffdf6; /* LIGHT */
+  padding: 18px 22px;
 }
 
+/* Active (OPEN) state */
+.mm-faq .accordion-button:not(.collapsed) {
+  background: #FFF1D6; /* DARK */
+  box-shadow: none;
+}
+
+/* Body */
+.mm-faq .accordion-body {
+  background: #FFF1D6; /* SAME as active header */
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Remove Bootstrap arrow */
+.mm-faq .accordion-button::after {
+  display: none;
+}
+
+/* + icon */
+.mm-faq .accordion-button::before {
+  content: "+";
+  position: absolute;
+  right: 22px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ff2d2d;
+}
+
+/* × icon when open */
+.mm-faq .accordion-button:not(.collapsed)::before {
+  content: "×";
+}
+
+/* Focus fix */
 .mm-faq .accordion-button:focus {
   box-shadow: none;
+}
+
+/* Red utility */
+.mm-red {
+  color: #ff2d2d;
 }
