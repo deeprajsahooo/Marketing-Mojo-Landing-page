@@ -6,24 +6,24 @@
 /* =========================
   BUTTONS (mm-btn)
 ========================= */
-.mm-btn{
-  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease;
-  will-change: transform;
+.mm-btn {
+    transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease;
+    will-change: transform;
 }
 
-.mm-btn:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(0,0,0,.10);
+.mm-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .10);
 }
 
-.mm-btn:active{
-  transform: translateY(0);
-  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+.mm-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
 }
 
-.mm-btn:focus-visible{
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(221,0,29,.18);
+.mm-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(221, 0, 29, .18);
 }
 
 
@@ -31,74 +31,82 @@
   HERO BG (mm-hero-bg)
   — horizontal drift only
 ========================= */
-.mm-hero-bg{
-  animation: heroBgDrift 16s ease-in-out infinite;
-  will-change: background-position;
+.mm-hero-bg {
+    animation: heroBgDrift 16s ease-in-out infinite;
+    will-change: background-position;
 }
 
-@keyframes heroBgDrift{
-  0%   { background-position: 50% 50%; }
-  50%  { background-position: 54% 50%; }
-  100% { background-position: 50% 50%; }
+@keyframes heroBgDrift {
+    0% {
+        background-position: 50% 50%;
+    }
+
+    50% {
+        background-position: 54% 50%;
+    }
+
+    100% {
+        background-position: 50% 50%;
+    }
 }
 
 /* Mobile: disable drift */
-@media (max-width: 991.98px){
-  .mm-hero-bg{
-    animation: none;
-  }
+@media (max-width: 991.98px) {
+    .mm-hero-bg {
+        animation: none;
+    }
 }
 
 
 /* =========================
   QR (mm-qr img)
 ========================= */
-.mm-qr img{
-  transition: transform .18s ease, filter .18s ease;
-  will-change: transform;
+.mm-qr img {
+    transition: transform .18s ease, filter .18s ease;
+    will-change: transform;
 }
 
-.mm-qr:hover img{
-  transform: translateY(-1px);
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,.10));
+.mm-qr:hover img {
+    transform: translateY(-1px);
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .10));
 }
 
 
 /* =========================
   KICKER (mm-kicker)
 ========================= */
-.mm-kicker{
-  transition: transform .25s ease, opacity .25s ease;
+.mm-kicker {
+    transition: transform .25s ease, opacity .25s ease;
 }
 
-.mm-kicker:hover{
-  transform: translateX(2px);
+.mm-kicker:hover {
+    transform: translateX(2px);
 }
 
 
 /* =========================
   NOTE (mm-note)
 ========================= */
-.mm-note{
-  transition: transform .18s ease, box-shadow .18s ease;
-  will-change: transform;
+.mm-note {
+    transition: transform .18s ease, box-shadow .18s ease;
+    will-change: transform;
 }
 
-.mm-note:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 12px 26px rgba(0,0,0,.08);
+.mm-note:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, .08);
 }
 
 
 /* =========================
   FOOTNOTE (mm-footnote)
 ========================= */
-.mm-footnote{
-  transition: opacity .18s ease;
+.mm-footnote {
+    transition: opacity .18s ease;
 }
 
-.mm-footnote:hover{
-  opacity: .92;
+.mm-footnote:hover {
+    opacity: .92;
 }
 
 
@@ -107,60 +115,60 @@
 ========================= */
 #sec3 .mm-step,
 #sec4 .mm-step,
-#sec5 .mm-step{
-  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
-  will-change: transform;
+#sec5 .mm-step {
+    transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    will-change: transform;
 }
 
 #sec3 .mm-step:hover,
 #sec4 .mm-step:hover,
-#sec5 .mm-step:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 12px 24px rgba(0,0,0,.07);
-  border-color: rgba(255,190,67,.95);
+#sec5 .mm-step:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .07);
+    border-color: rgba(255, 190, 67, .95);
 }
 
 
 /* =========================
   PREMIUM PILL HOVER
 ========================= */
-.mm-premium .mm-pill{
-  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
-  will-change: transform;
+.mm-premium .mm-pill {
+    transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+    will-change: transform;
 }
 
-.mm-premium .mm-pill:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(0,0,0,.08);
-  background: #fff6e1;
+.mm-premium .mm-pill:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .08);
+    background: #fff6e1;
 }
 
-.mm-premium .mm-pill-ic{
-  transition: transform .18s ease;
+.mm-premium .mm-pill-ic {
+    transition: transform .18s ease;
 }
 
-.mm-premium .mm-pill:hover .mm-pill-ic{
-  transform: scale(1.04);
+.mm-premium .mm-pill:hover .mm-pill-ic {
+    transform: scale(1.04);
 }
 
 
 /* =========================
   IMAGES (mm-tilt)
 ========================= */
-.mm-tilt{
-  transition: transform .25s ease, filter .25s ease;
-  will-change: transform;
+.mm-tilt {
+    transition: transform .25s ease, filter .25s ease;
+    will-change: transform;
 }
 
-.mm-tilt:hover{
-  transform: translateY(-2px);
-  filter: drop-shadow(0 18px 28px rgba(0,0,0,.14));
+.mm-tilt:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .14));
 }
 
-@media (max-width: 991.98px){
-  .mm-tilt:hover{
-    transform: none;
-  }
+@media (max-width: 991.98px) {
+    .mm-tilt:hover {
+        transform: none;
+    }
 }
 
 
@@ -168,43 +176,44 @@
   CAROUSEL
 ========================= */
 #c3 .carousel-item,
-#c4 .carousel-item{
-  transition: transform .55s ease-in-out;
+#c4 .carousel-item {
+    transition: transform .55s ease-in-out;
 }
 
 #sec3 .mm-carousel-img,
-#sec4 .mm-carousel-img{
-  transition: transform .25s ease, filter .25s ease;
+#sec4 .mm-carousel-img {
+    transition: transform .25s ease, filter .25s ease;
 }
 
-@media (hover:hover){
-  #sec3 .mm-carousel-img:hover,
-  #sec4 .mm-carousel-img:hover{
-    transform: scale(1.01);
-    filter: drop-shadow(0 14px 22px rgba(0,0,0,.12));
-  }
+@media (hover:hover) {
+
+    #sec3 .mm-carousel-img:hover,
+    #sec4 .mm-carousel-img:hover {
+        transform: scale(1.01);
+        filter: drop-shadow(0 14px 22px rgba(0, 0, 0, .12));
+    }
 }
 
 #sec3 .carousel-indicators [data-bs-target],
-#sec4 .carousel-indicators [data-bs-target]{
-  transition: opacity .18s ease, background-color .18s ease;
+#sec4 .carousel-indicators [data-bs-target] {
+    transition: opacity .18s ease, background-color .18s ease;
 }
 
 #sec3 .carousel-indicators [data-bs-target]:hover,
-#sec4 .carousel-indicators [data-bs-target]:hover{
-  opacity: .85;
+#sec4 .carousel-indicators [data-bs-target]:hover {
+    opacity: .85;
 }
 
 
 /* =========================
   LINKS
 ========================= */
-.mm-link{
-  transition: opacity .18s ease;
+.mm-link {
+    transition: opacity .18s ease;
 }
 
-.mm-link:hover{
-  opacity: .88;
+.mm-link:hover {
+    opacity: .88;
 }
 
 /* =====================================================
@@ -216,87 +225,87 @@
 /* =========================
   SECTION TITLE
 ========================= */
-.section-title{
-  transition: transform .25s ease, opacity .25s ease;
+.section-title {
+    transition: transform .25s ease, opacity .25s ease;
 }
 
-.section-title:hover{
-  transform: translateX(2px);
+.section-title:hover {
+    transform: translateX(2px);
 }
 
 
 /* =========================
   CARD BASE
 ========================= */
-.tutorial-card{
-  transition: transform .22s ease, box-shadow .22s ease;
-  will-change: transform;
+.tutorial-card {
+    transition: transform .22s ease, box-shadow .22s ease;
+    will-change: transform;
 }
 
-.tutorial-card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 18px 34px rgba(0,0,0,.10);
+.tutorial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, .10);
 }
 
 
 /* =========================
   IMAGE — gentle scale
 ========================= */
-.card-img-wrapper img{
-  transition: transform .35s ease;
-  will-change: transform;
+.card-img-wrapper img {
+    transition: transform .35s ease;
+    will-change: transform;
 }
 
-@media (hover:hover){
-  .tutorial-card:hover .card-img-wrapper img{
-    transform: scale(1.04);
-  }
+@media (hover:hover) {
+    .tutorial-card:hover .card-img-wrapper img {
+        transform: scale(1.04);
+    }
 }
 
 
 /* =========================
   PLAY ICON — micro response
 ========================= */
-.play-icon{
-  transition: background-color .22s ease, transform .22s ease;
-  will-change: transform;
+.play-icon {
+    transition: background-color .22s ease, transform .22s ease;
+    will-change: transform;
 }
 
-.tutorial-card:hover .play-icon{
-  transform: scale(1.06);
-  background-color: var(--mm-red);
+.tutorial-card:hover .play-icon {
+    transform: scale(1.06);
+    background-color: var(--mm-red);
 }
 
 
 /* =========================
   CARD TITLE
 ========================= */
-.card-content h3{
-  transition: color .2s ease;
+.card-content h3 {
+    transition: color .2s ease;
 }
 
-.tutorial-card:hover .card-content h3{
-  color: #000;
+.tutorial-card:hover .card-content h3 {
+    color: #000;
 }
 
 
 /* =========================
   ARROW CONTROLS
 ========================= */
-.custom-arrow{
-  transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
-  will-change: transform;
+.custom-arrow {
+    transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
+    will-change: transform;
 }
 
-.custom-arrow:hover{
-  transform: translateY(-1px);
-  opacity: .9;
-  box-shadow: 0 10px 20px rgba(0,0,0,.12);
+.custom-arrow:hover {
+    transform: translateY(-1px);
+    opacity: .9;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12);
 }
 
-.custom-arrow:active{
-  transform: translateY(0);
-  box-shadow: 0 6px 14px rgba(0,0,0,.10);
+.custom-arrow:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .10);
 }
 
 /* =====================================================
@@ -304,57 +313,58 @@
 ===================================================== */
 
 /* Accordion item hover (subtle, no lift) */
-.mm-faq .accordion-item{
-  transition: box-shadow .25s ease, border-color .25s ease;
+.mm-faq .accordion-item {
+    transition: box-shadow .25s ease, border-color .25s ease;
 }
 
-.mm-faq .accordion-item:hover{
-  border-color: rgba(255,190,67,.6);
-  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+.mm-faq .accordion-item:hover {
+    border-color: rgba(255, 190, 67, .6);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .06);
 }
 
 
 /* Button base transition */
-.mm-faq .accordion-button{
-  transition: background-color .25s ease, color .25s ease;
+.mm-faq .accordion-button {
+    transition: background-color .25s ease, color .25s ease;
 }
 
 
 /* Plus / Cross icon animation */
-.mm-faq .accordion-button::before{
-  transition: transform .25s ease, opacity .25s ease;
-  transform-origin: center;
+.mm-faq .accordion-button::before {
+    transition: transform .25s ease, opacity .25s ease;
+    transform-origin: center;
 }
 
 /* Rotate when open */
-.mm-faq .accordion-button:not(.collapsed)::before{
-  transform: rotate(90deg);
+.mm-faq .accordion-button:not(.collapsed)::before {
+    transform: rotate(90deg);
 }
 
 
 /* Body slide-fade feel (Bootstrap-safe) */
-.mm-faq .accordion-collapse{
-  transition: height .35s ease;
+.mm-faq .accordion-collapse {
+    transition: height .35s ease;
 }
 
-.mm-faq .accordion-body{
-  animation: faqFade .25s ease;
+.mm-faq .accordion-body {
+    animation: faqFade .25s ease;
 }
 
-@keyframes faqFade{
-  from{
-    opacity: 0;
-    transform: translateY(-4px);
-  }
-  to{
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes faqFade {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
 /* Keyboard focus clarity */
-.mm-faq .accordion-button:focus-visible{
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(221,0,29,.18);
+.mm-faq .accordion-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(221, 0, 29, .18);
 }

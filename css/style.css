@@ -1110,7 +1110,6 @@ body {
 
 /* Section */
 .mm-faq {
-  padding: 56px 0 72px;
   padding: 40px 10px;
   background: #fff;
   position: relative;
@@ -1129,24 +1128,15 @@ body {
   }
 }
 
-}
-
-.mm-faq h3 {
-  color: #000;
-  font-weight: 500;
-  font-size: 24px;
-  font-weight: 300;
-}
-
 /* Wrapper */
 .mm-faq .mm-faq-wrap {
   max-width: 920px;
-  padding: 0 12px;
 }
 
 /* Accordion item */
 .mm-faq .accordion-item {
   border-radius: 8px !important;
+  border: 0 !important;
   overflow: hidden;
   margin-bottom: 14px;
   background: #FFF0D4;
@@ -1175,7 +1165,7 @@ body {
   background: #FFF1D6;
   /* SAME as active header */
   font-size: 24px;
-    font-weight: 300;
+  font-weight: 300;
   color: #3F3F3F;
 }
 
