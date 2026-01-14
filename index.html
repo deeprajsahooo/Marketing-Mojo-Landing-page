@@ -441,73 +441,106 @@
     </section>
 
     <!-- =========================
-    6) TEXT CAROUSEL (Feature cards)
-  ========================= -->
-    <section class="mm-mini" data-aos="fade-up">
-      <div class="container">
-        <h3 class="text-center mb-4">And list of new features continues...</h3>
+ FEATURE PILLS CAROUSEL
+========================= -->
 
-        <div id="c6" class="carousel slide" data-bs-ride="carousel">
+    <section class="mm-mini-carousel">
+      <div class="container">
+
+        
+        <h2 class="mm-h2 text-center mb-4">And list of new features continues...</h2>
+
+        <div id="featureCarousel" class="carousel slide" data-bs-ride="false">
           <div class="carousel-inner">
 
+            <!-- SLIDE 1 -->
             <div class="carousel-item active">
               <div class="row g-3 justify-content-center">
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="mm-mini-card">
-                    <div class="mm-mini-ic"><span class="material-icons">event</span></div>
-                    <div>
-                      <div class="fw-semibold">Stock of the Week/ Month</div>
-                      <div class="small text-muted">Monthly top picks with targets and rationale.</div>
+                  <div class="mm-feature-pill">
+                    <div class="mm-mini-ic">
+                      <span class="material-icons">event</span>
+                    </div>
+                    <div class="mm-feature-txt">
+                      <div class="fw-medium">Stock of the Week / Month</div>
+                      <div style="font-size: 20px; font-weight:300;">
+                        Monthly top picks with targets and rationale.
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="mm-mini-card">
-                    <div class="mm-mini-ic"><span class="material-icons">description</span></div>
-                    <div>
-                      <div class="fw-semibold">Research Reports</div>
-                      <div class="small text-muted">Real time reports of the stocks.</div>
+                  <div class="mm-feature-pill">
+                    <div class="mm-mini-ic">
+                      <span class="material-icons">content_paste_search</span>
+                    </div>
+                    <div class="mm-feature-txt">
+                      <div class="fw-medium">Research Reports</div>
+                      <div style="font-size: 20px; font-weight:300;">
+                        Real-time research-backed stock insights.
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="mm-mini-card">
-                    <div class="mm-mini-ic"><span class="material-icons">stacked_line_chart</span></div>
-                    <div>
-                      <div class="fw-semibold">Top mojo Stocks</div>
-                      <div class="small text-muted">Elite picks monthly from top listed companies.</div>
+                  <div class="mm-feature-pill">
+                    <div class="mm-mini-ic">
+                      <span class="material-icons">area_chart</span>
+                    </div>
+                    <div class="mm-feature-txt">
+                      <div class="fw-medium">Top Mojo Stocks</div>
+                      <div style="font-size: 20px; font-weight:300;">
+                        Elite picks from top listed companies.
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- SLIDE 2 -->
             <div class="carousel-item">
               <div class="row g-3 justify-content-center">
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="mm-mini-card">
-                    <div class="mm-mini-ic"><span class="material-icons">verified</span></div>
-                    <div>
-                      <div class="fw-semibold">MOJO Score</div>
-                      <div class="small text-muted">0–100 scores &amp; ratings like Strong Buy.</div>
+                  <div class="mm-feature-pill">
+                    <div class="mm-mini-ic">
+                      <span class="material-icons">candlestick_chart</span>
+                    </div>
+                    <div class="mm-feature-txt">
+                      <div class="fw-medium">MomentumNow Stocks</div>
+                      <div style="font-size: 20px; font-weight:300;">
+                        High-momentum trading opportunities. 
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="mm-mini-card">
-                    <div class="mm-mini-ic"><span class="material-icons">school</span></div>
-                    <div>
-                      <div class="fw-semibold">MOJO Times</div>
-                      <div class="small text-muted">Short research bites &amp; explainers.</div>
+                  <div class="mm-feature-pill">
+                    <div class="mm-mini-ic">
+                      <span class="material-icons">insights</span>
+                    </div>
+                    <div class="mm-feature-txt">
+                      <div class="fw-medium">Market Insights</div>
+                      <div style="font-size: 20px; font-weight:300;">
+                        Daily trends & expert commentary.
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div class="mm-mini-card">
-                    <div class="mm-mini-ic"><span class="material-icons">manage_search</span></div>
-                    <div>
-                      <div class="fw-semibold">Smart Search</div>
-                      <div class="small text-muted">Clearer signals while searching stocks.</div>
+                  <div class="mm-feature-pill">
+                    <div class="mm-mini-ic">
+                      <span class="material-icons">track_changes</span>
+                    </div>
+                    <div class="mm-feature-txt">
+                      <div class="fw-medium">Smart Signals</div>
+                      <div style="font-size: 20px; font-weight:300;">
+                        Buy / Sell signals powered by analytics.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -516,12 +549,17 @@
 
           </div>
 
-          <button class="carousel-control-prev" type="button" data-bs-target="#c6" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#c6" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span>
-          </button>
+          <!-- CUSTOM ARROWS -->
+          <div class="controls-wrapper mt-4">
+            <button class="custom-arrow prev" type="button" data-bs-target="#featureCarousel" data-bs-slide="prev">
+              <span class="material-icons">arrow_back</span>
+            </button>
+
+            <button class="custom-arrow next" type="button" data-bs-target="#featureCarousel" data-bs-slide="next">
+              <span class="material-icons">arrow_forward</span>
+            </button>
+          </div>
+
         </div>
       </div>
     </section>
