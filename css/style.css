@@ -75,6 +75,13 @@ body {
   color: var(--mm-red);
 }
 
+.mm-logo {
+  height: 25px;        /* very small logo */
+  width: auto;
+  vertical-align: middle;
+}
+
+
 /* =========================
    1) HERO (mm-hero)
 ========================= */
@@ -585,7 +592,7 @@ body {
 
 #sec3 .mm-footnote {
   margin-top: 80px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   color: #282727;
   display: flex;
@@ -748,7 +755,7 @@ body {
 
 #sec4 .mm-footnote {
   margin-top: 80px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   color: #282727;
   display: flex;
@@ -855,7 +862,7 @@ body {
 
 #sec5 .mm-footnote {
   margin-top: 80px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   color: #282727;
   display: flex;

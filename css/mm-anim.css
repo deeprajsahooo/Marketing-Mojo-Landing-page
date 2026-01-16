@@ -115,6 +115,22 @@ body {
   100% { transform: scale(1); }
 }
 
+.mm-logo{
+
+  animation: mmQrBreathe 3.2s ease-in-out infinite;
+  transition: transform .22s var(--mm-ease), filter .22s var(--mm-ease);
+  will-change: transform;
+  transform-origin: center;
+}
+@keyframes mmQrBreathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04); /* very slight grow */
+  }
+}
+
 /* =========================
   HERO FORM (mm-form) — subtle hover
 ========================= */
