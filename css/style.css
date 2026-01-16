@@ -1322,3 +1322,26 @@ body {
 .mm-red {
   color: #DD001D;
 }
+
+/* Disclaimer Section Styling */
+.mm-disclaimer {
+  background-color: #fff0d4;
+  padding: 20px 10px;
+  margin-top: 50px;
+  border-top: 1px solid #FFBE43;
+}
+
+.mm-disclaimer-content {
+  font-size: 10px;
+  color: #3F3F3F;
+  text-align: center;
+}
+
+.mm-disclaimer-content a {
+  color: var(--mm-red);
+  text-decoration: none;
+}
+
+.mm-disclaimer-content a:hover {
+  text-decoration: underline;
+}
